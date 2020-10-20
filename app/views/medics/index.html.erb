@@ -1,0 +1,33 @@
+<h1>Medics</h1>
+
+
+<%= flash[:notice] %>
+  <table>
+    <thead>
+      <tr>
+        <th>CCG</th>
+        <th>Group</th>
+        <th>Post Code</th>
+        <th>Practice Name</th>
+        <th>Address</th>
+        <th>List Size</th>
+        <th>Brick</th>
+        <th>Telephone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @medics.each do |medic| %>
+        <tr>
+          <td><%= medic.ccg %></td>
+          <td><%= medic.group %></td>
+          <td><%= medic.postcode %></td>
+          <td><%= medic.practice_name%></td>
+          <td><%= medic.address %></td>
+          <td><%= medic.list_size %></td>
+          <td><%= medic.brick %></td>
+          <td><%= (medic.telephone).to_i %></td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+<div>
