@@ -1,0 +1,19 @@
+<div class="container">
+<div class="row mt-2">
+    <h2 class="mx-auto">Details for: <%= @medic.practice_name%></h2>
+</div>
+  <table class="table table-bordered table-hover show-details">
+    <tbody>
+        <tr class="card card-header">
+          <td><strong>Which CCG: </strong><%= @medic.ccg %></td>
+          <td><strong>Type of Health care: </strong><%= @medic.group %></td>
+          <td><strong>Name of Practice: </strong><%= @medic.practice_name%></td>
+          <td><strong>Address: </strong><%= @medic.address %></td>
+          <td><strong>Postcode: </strong><%= @medic.postcode %></td>
+          <td><strong>Area: </strong><%= @medic.brick %></td>
+          <td><strong>Number of registered patients: </strong><%= @medic.list_size %></td>
+          <td><strong>Telephone Number: </strong><%= (@medic.telephone).to_i %></td>
+        </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,1 +1,35 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+// Footer
+
+.footer {
+  color: #d3d3d3;
+  margin-top: 300px;
+}
+
+.results-block {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.block-results {
+  margin: auto;
+}
+.show-details {
+  margin-top: 60px;
+}
+
+.search-area, .for-phone {
+  @media only screen
+  and (max-width: 480px)
+  and (orientation: portrait) {
+    .btn {
+      margin-left: 100px;
+      margin-top: 15px;
+      width: 40%;
+    }
+    .medic-results, .table {
+      margin-right: 20px !important;
+    }
+  }
+}

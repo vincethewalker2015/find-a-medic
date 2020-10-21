@@ -1,0 +1,22 @@
+
+<div class="results-block">
+  <%= render 'layouts/flash' %>
+</div>
+<% if @medics %>
+  <!-- <div class="card card-header results-block"> -->
+  <div class="container">
+    <table class="table table-bordered tabel-hover">
+      <tbody>
+        <% @medics.each do |medic| %>
+          <tr class="card card-header  mb-4 medic-description">
+            <td class="mt-1"><strong>Name of Medical Center: </strong> <%= medic.practice_name %></td>
+            <td class="mt-1"><strong class="ml-2 ">Address: </strong> <%= medic.address %></td>
+            <td class="mt-1"><strong class="ml-2 ">Postcode: </strong> <%= medic.postcode %></td>
+            <td class="mt-1"><%= link_to "View #{medic.practice_name}'s Details", medic_path(medic),class: "btn btn-outline-primary btn-sm ml-2" %>
+            </td>
+          </tr>
+        <% end %>
+    </tbody>
+  </table>
+  </div>
+<% end %> 
