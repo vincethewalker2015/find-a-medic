@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row mt-2">
+  <h1 class="ml-3">Search for a Medical Center</h1>
+</div>
+<div class='search-area mt-4'></div>
+  <%= form_tag search_medic_path, remote: true, method: :get do %>
+    <div class="form-group row">
+      <div class="col-sm-9 no-right-padding for-phone">
+        <%= text_field_tag :medic, params[:medic], placeholder: "Look up Medical Center", autofocus: true, class: "form-control form-control-lg" %>
+      </div>
+      <div class="col-sm-3 no-left-padding for-phone">
+        <%= button_tag type: :submit, class: "btn btn-dark btn-lg" do %>
+        <i class="fa fa-search "></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
+
+<div id="medic-results">
+</div>
