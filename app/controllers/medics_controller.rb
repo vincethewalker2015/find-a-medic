@@ -24,7 +24,7 @@ class MedicsController < ApplicationController
         end
         else
         respond_to do |format|
-        flash.now[:danger] = "Please enter a Todo name or description to search"
+        flash.now[:danger] = "Please enter a name or postcode to search.."
         format.js { render partial: 'medics/medic_result' }
       end
     end
